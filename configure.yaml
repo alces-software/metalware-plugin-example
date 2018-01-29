@@ -1,0 +1,42 @@
+
+questions:
+  - &domain_question
+    identifier: domain_question
+    question: 'Example plugin domain question'
+
+  - &group_question
+    identifier: group_question
+    question: 'Example plugin group question'
+
+  - &node_question
+    identifier: node_question
+    question: 'Example plugin node question'
+
+  - &local_question
+    identifier: local_question
+    question: 'Example plugin local question'
+
+  - &awesome_toggle
+    identifier: awesome_toggle
+    question: 'Should this plugin be awesome?'
+    type: 'boolean'
+    dependent:
+      - identifier: awesome_magnitude
+        question: 'How awesome should it be (1-10)?'
+        type: 'integer'
+
+domain:
+  - *domain_question
+  - *awesome_toggle
+
+group:
+  - *group_question
+  - *awesome_toggle
+
+node:
+  - *node_question
+  - *awesome_toggle
+
+local:
+  - *local_question
+  - *awesome_toggle

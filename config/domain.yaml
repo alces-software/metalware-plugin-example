@@ -1,0 +1,7 @@
+
+some_parameter: some_value
+self_referential_parameter: "<%= node.plugins.example.config.some_parameter %>"
+
+files:
+  scripts:
+    - 'example-script.sh'
